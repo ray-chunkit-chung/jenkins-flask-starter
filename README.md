@@ -4,6 +4,26 @@
 https://joachim8675309.medium.com/jenkins-ci-pipeline-with-python-8bf1a0234ec3
 
 
+# Install jenkins
+https://github.com/jenkinsci/docker
+
+```
+```
+
+
+## Install docker agent cloud in Jenkins
+ - https://devopscube.com/docker-containers-as-build-slaves-jenkins
+ - https://devopscube.com/jenkins-build-agents-kubernetes/
+
+## Docker Host URI?? Docker Host????
+Name=docker
+Docker Host URI=tcp://10.128.0.3:4243
+
+https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach
+
+## 50000:50000 agent port????
+https://www.jenkins.io/doc/book/security/services/#tcp-agent-listener-port
+
 # Getting started on Azure infrastructure as code
 App link
  - https://infra-as-code-flask-ray-chunkit-chung.azurewebsites.net/
