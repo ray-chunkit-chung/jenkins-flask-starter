@@ -1,6 +1,26 @@
+/* groovylint-disable-next-line CompileStatic */
 pipeline {
-  agent { docker { image 'python:3.7.2' } }
+  agent {
+    label 'jenkins-agent-local'
+  }
+
+  ////////////////////////////////////////////////
+  // Detect changes in the code
+  // Analyze the quality of the source code
+  // Build
+  // Execute all unit tests
+  // Execute all integration tests
+  // Generate deployable artifacts
+  // Report status
+  ////////////////////////////////////////////////
   stages {
+    stage('checkout') {
+      steps {
+        git branch: 'main',
+            url: 'https://github.com/reselbob/secret-agent.git'
+        sh 'npm install'
+      }
+    }
     stage('build') {
       steps {
         sh 'pip install -r requirements.txt'
@@ -9,7 +29,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'python test.py'
-      }   
+      }
     }
   }
 }
