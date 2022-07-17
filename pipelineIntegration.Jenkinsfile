@@ -18,7 +18,7 @@ pipeline {
       steps {
         git branch: 'main',
             url: 'https://github.com/reselbob/secret-agent.git'
-        sh 'npm install'
+        sh 'echo npm-install'
       }
     }
     stage('build') {
